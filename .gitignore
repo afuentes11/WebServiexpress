@@ -1,14 +1,17 @@
-# Logs
-logs
-*.log
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-lerna-debug.log*
+# Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos,firebase
+# Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,macos,firebase
 
-# Diagnostic reports (https://nodejs.org/api/report.html)
-report.[0-9]*.[# Created by https://www.toptal.com/developers/gitignore/api/node,windows,macos
-# Edit at https://www.toptal.com/developers/gitignore?templates=node,windows,macos
+### Firebase ###
+.idea
+**/node_modules/*
+**/.firebaserc
+
+### Firebase Patch ###
+.runtimeconfig.json
+.firebase/
+
+### Firestore Key
+mensajeria-808b2-firebase-adminsdk-1708b-a66117146b.json
 
 ### macOS ###
 # General
@@ -195,4 +198,4 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/node,windows,macos
+# End of https://www.toptal.com/developers/gitignore/api/node,windows,macos,firebase
