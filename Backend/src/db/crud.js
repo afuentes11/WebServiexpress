@@ -1,15 +1,17 @@
 const db = require('./firebase.js');
 
 // get all users from Users collections
-function getUsers(){
+function getUsers(callback) {
     return db.collection('Users').get()
         .then((users)=>{
+            var arrayUsers = [];
             users.forEach(user=>{
-                console.log(user.id, '=>', user.data());
+                arrayUsers.push(user.data());
             });
+            callback(arrayUsers);
         })
         .catch((err)=>{
-            console.log(`error to get Users ${err}`);
+            callback(`error to get Users ${err}`);
         })
 }
 
