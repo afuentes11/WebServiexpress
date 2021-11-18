@@ -17,8 +17,8 @@ function getUsers(callback) {
 
 function getUser(userId,callback){
     return db.collection('Users').doc(userId).get()
-        .then((doc)=>{
-            callback(doc);
+        .then((user)=>{
+            callback(user.data());
         })
         .catch((err)=>{
             callback(`error to get users ${err}`);
