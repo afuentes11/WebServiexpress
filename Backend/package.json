@@ -8,7 +8,7 @@
     "dev": "nodemon index.js",
     "start": "node index.js"
   },
-  "author": "Andres Fuentes",
+  "author": "Grupo-8",
   "license": "ISC",
   "dependencies": {
     "axios": "^0.24.0",
