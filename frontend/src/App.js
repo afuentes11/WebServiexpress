@@ -1,14 +1,25 @@
 import React from 'react'
-import BarraNavegacion from './components/BarraNavegacion';
-import SeccionCotizar from './screens/SeccionCotizar';
 import 'bootstrap/dist/css/bootstrap.min.css';
+import {BrowserRouter, Route, Routes} from 'react-router-dom';
+
+import Home from './screens/Home';
+import ActualizarDatos from './screens/ActualizarDatos';
+import Pedidos from './screens/Pedidos';
+
 
 function App() {
+
   return (
-    <React.Fragment>
-      <BarraNavegacion/>
-      <SeccionCotizar/>
-    </React.Fragment>
+      <>
+
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element = {<Home/>}/>
+            <Route path="/actualizar-datos" element = {<ActualizarDatos/>}/>
+            <Route path="/pedidos" element = {<Pedidos/>}/>
+          </Routes>
+        </BrowserRouter>
+      </>
   );
 }
 
