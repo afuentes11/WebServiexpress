@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import {Form, Row, Col, Button} from 'react-bootstrap'
+import {Form, Row, Col, Button, Container} from 'react-bootstrap'
 
 const FormularioCotizar = () => {
 
@@ -97,10 +97,10 @@ const FormularioCotizar = () => {
 
     return (
         <>
-            <Form>
+            <Form  as={Container} className="shadow py-5 px-3 " style={{borderRadius:'50px 50px 50px 50px'}}>
                 <Row className="mt-4 mb-3">
                     <Form.Label htmlFor="inlineFormCustomSelect" visuallyHidden={false?true:false} >
-                        <h2>Cotiza tu servicio aquí</h2>
+                        <h1>Cotiza tu servicio aquí</h1>
                     </Form.Label>
                 </Row>
                 
@@ -123,8 +123,8 @@ const FormularioCotizar = () => {
                     </Form.Group>
                 </Row>
                 
-                <Row className="text-start mb-4" >
-                    <Form.Group as = {Col} sm={{ span: 10, offset: 1}}  lg={{ span: 4, offset: 0}} >
+                <Row className="text-start mb-4">
+                    <Form.Group as = {Col} sm={{ span: 12}}  lg={{ span: 4, offset: 0}} className='mb-lg-0 mb-4'>
                         <Form.Label>Distancia</Form.Label>
                         <Form.Select   
                         value={(tipoServicio !== '1' && tipoServicio !== '2')?'1':distancia} 
@@ -136,7 +136,7 @@ const FormularioCotizar = () => {
                         </Form.Select>
                     </Form.Group>
                     
-                    <Form.Group as = {Col} sm={{ span: 10, offset: 1}}  lg={{ span: 4, offset: 0}} >
+                    <Form.Group as = {Col} sm={{ span: 12}}  lg={{ span: 4, offset: 0}} className='mb-lg-0 mb-4'>
                         <Form.Label >Tiempo estimado</Form.Label>
                         <Form.Select  
                         value={(tipoServicio !== '3' && tipoServicio !== '7' && tipoServicio !== '9' && tipoServicio !== '10')?'1':tiempo} 
@@ -149,7 +149,7 @@ const FormularioCotizar = () => {
                         </Form.Select>
                     </Form.Group>
                     
-                    <Form.Group as = {Col} sm={{ span: 10, offset: 1}}  lg={{ span: 4, offset: 0}} >
+                    <Form.Group as = {Col} sm={{ span: 12}}  lg={{ span: 4, offset: 0}} className='mb-lg-0 mb-2'>
                         <Form.Label >Dinero a transportar</Form.Label>
                         <Form.Select   
                         value={(tipoServicio !== '6' && tipoServicio !== '8')?'1':dinero} 
@@ -167,7 +167,7 @@ const FormularioCotizar = () => {
                     <Col sm={{ span: 10, offset: 1}}  lg={{ span: 3, offset: 1}}>
                         <Form.Check label="Zona peligrosa"
                         value = {zonaPeligrosa}
-                        onChange={onChangeZonaPeligrosa}/>
+                        onChange={onChangeZonaPeligrosa} />
                     </Col>
                     <Col sm={{ span: 10, offset: 1}}  lg={{ span: 4, offset: 2}}>
                         <Form.Check label="Fuera del casco urbano" 
@@ -178,15 +178,15 @@ const FormularioCotizar = () => {
                 </Form.Group>
 
                 <Form.Group as={Row} >
-                    <Col sm={{ span: 10, offset: 1}}  lg={{ span: 4, offset: 0}}>
-                        <h3>Total estimado:</h3>
-                    </Col>
-                    <Col sm={{ span: 10, offset: 1}}  lg={{ span: 5, offset: 0}}>
-                        <Form.Control type="text"  readOnly value = {total} className='text-center'/>
-                    </Col>
-                    <Col sm={{ span: 10, offset: 1}}  lg={{ span: 3, offset: 0}}>
-                        <Button variant="warning" className='pr-10 pl-10' onClick={onClick}>Success</Button>
-                    </Col>
+                    <Form.Group as={Col} sm={{ span: 4, offset: 0}} className='d-flex mb-lg-0 mb-sm-2 align-items-center justify-content-center'>
+                        <h4>Total estimado:</h4>
+                    </Form.Group>
+                    <Form.Group as={Col} sm={{ span: 5, offset: 0}} className='d-flex mb-lg-0 mb-3 align-items-center justify-content-center'>
+                        <Form.Control type="text"  readOnly value = {total} className=' text-center align-items-center' style={{height: '50px'}}/>
+                    </Form.Group>
+                    <Form.Group as={Col} sm={{ span: 3, offset: 0}}  className='d-flex align-items-center justify-content-center'>
+                        <Button  className='btn ' onClick={onClick} style={{width: '100px', height: '50px'}}>Success</Button>
+                    </Form.Group>
             
                 </Form.Group>
 
