@@ -1,16 +1,23 @@
 import React from 'react'
 import {Navigate} from 'react-router-dom';
+import {Container} from 'react-bootstrap'
 
 import BarraNavegacion from '../components/barraNavegacion/BarraNavegacion';
+import ListaPedidos from '../components/pedidos/ListaPedidos'
 
 const Pedidos = () => {
-    if(localStorage.getItem('data') === null){
+    if(localStorage.getItem('id') === null){
         return <Navigate to='/'/>
     }
     return (
         <>  
             <BarraNavegacion login={true} noHome={true}/>
-            <h1>PEDIDOS</h1>
+            <Container className='d-block m-3'>
+                <ListaPedidos/>
+            </Container>
+            
+            
+            
         </>
     )
 }
