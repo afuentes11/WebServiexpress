@@ -26,7 +26,7 @@ function getUser(userId,callback){
 }
 
 function addUser(user, callback) {
-    return db.collection('Users').add(user)
+    return db.collection('Users').doc(user.id).set(user)
         .then(()=>{
             callback('Expert create');
         })
