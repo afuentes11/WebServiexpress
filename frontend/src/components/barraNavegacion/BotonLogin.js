@@ -3,6 +3,7 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
+import {addUser, getUser} from '../../apis/UsersCRUD';
 
 // Configure Firebase.
 const config = {
@@ -31,12 +32,29 @@ const uiConfig = {
     callbacks:{
         signInSuccessWithAuthResult: (result) => {
             const obj = {
-                'id': result.user.uid,
-                'email': result.user.email,
-                picture: result.user.photoURL
+                "nombre": result.user.displayName,
+                "id": result.user.uid,
+                "cedula":'',
+                "email": result.user.email,
+                "celular": (result.user.phoneNumber===null)?'':result.user.phoneNumber,
+                "foto": result.user.photoURL,
+                "direccion":'',
+                "servicios":[]
             };
-            localStorage.setItem('data', JSON.stringify(obj));
+            //verificamos si es un usuario nuevo
+            if(result.additionalUserInfo.isNewUser){
+                addUser(obj, (response)=>{
+                    console.log(response);
+                });
+            }
+            getUser(result.user.uid, (response)=>{
+                localStorage.setItem('user', JSON.stringify(response.data));
+                localStorage.setItem('id', result.user.uid);
+            });
+            
             return true;
+            
+            
         },
     },
 };
