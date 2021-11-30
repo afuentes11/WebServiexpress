@@ -5,7 +5,7 @@ import NavBarSm from './NavBarSm'
 
 const BarraNavegacion = (props) => {
   const cerrarSesion = () => {
-    localStorage.removeItem('data');
+    localStorage.clear();
   };
   return (
     <>

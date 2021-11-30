@@ -28,8 +28,10 @@ return (
                 <Nav.Link href="#cotizar">Cotizar</Nav.Link>
                 <Nav.Link href="#solicitar-servicio">Solicitar servicio</Nav.Link>
                 <NavDropdown title="Sobre nosotros" id="collasible-nav-dropdown">
-                <NavDropdown.Item href="#quienes-somos">Quienes somos</NavDropdown.Item>
-                <NavDropdown.Item href="#contactanos">Contactanos</NavDropdown.Item>
+                <NavDropdown.Item href="/#quienes-somos">Quienes somos</NavDropdown.Item>
+                <NavDropdown.Item href="/#mision">Misión</NavDropdown.Item>
+                <NavDropdown.Item href="/#vision">Visión</NavDropdown.Item>
+                <NavDropdown.Item href="/#experiencia">Experiencia</NavDropdown.Item>
                 </NavDropdown>
             </Nav>
             <Nav>
