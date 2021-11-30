@@ -97,7 +97,7 @@ const FormularioCotizar = () => {
 
     return (
         <>
-            <Form  as={Container} className="shadow py-5 px-3 " style={{borderRadius:'50px 50px 50px 50px'}}>
+            <Form  as={Container} className="shadow py-5 px-3 " style={{borderRadius:'30px 30px 30px 30px'}}>
                 <Row className="mt-4 mb-3">
                     <Form.Label htmlFor="inlineFormCustomSelect" visuallyHidden={false?true:false} >
                         <h1>Cotiza tu servicio aquí</h1>
@@ -185,7 +185,7 @@ const FormularioCotizar = () => {
                         <Form.Control type="text"  readOnly value = {total} className=' text-center align-items-center' style={{height: '50px'}}/>
                     </Form.Group>
                     <Form.Group as={Col} sm={{ span: 3, offset: 0}}  className='d-flex align-items-center justify-content-center'>
-                        <Button  className='btn ' onClick={onClick} style={{width: '100px', height: '50px'}}>Success</Button>
+                        <Button  variant="dark" className='btn ' onClick={onClick} style={{width: '100px', height: '50px'}}>Success</Button>
                     </Form.Group>
             
                 </Form.Group>

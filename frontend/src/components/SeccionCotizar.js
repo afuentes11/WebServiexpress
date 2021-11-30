@@ -6,7 +6,7 @@ import {Container, Row, Col} from "react-bootstrap";
 const SeccionCotizar = () => {
     return (
         <>
-        <Container fluid >
+        <Container id='cotizar' fluid >
         <Container fluid className='mt-3'>
             <Row >
                 <Col sm={{ span: 12, offset: 0}}  lg={{ span: 6, offset: 0, order:2}} className =' align-self-center'>
