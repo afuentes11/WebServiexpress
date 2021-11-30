@@ -1,5 +1,5 @@
 import React from 'react';
-import {Carousel} from 'react-bootstrap';
+import {Carousel, Container} from 'react-bootstrap';
 import img1 from '../assets/img/img1.jpg';
 import img2 from '../assets/img/img2.jpg';
 import img3 from '../assets/img/img3.jpg';
@@ -7,6 +7,7 @@ import img3 from '../assets/img/img3.jpg';
 const Carrusel = () => {
     return (
         <>
+        <Container fluid={true} className=" mt-3 p-0">
             <Carousel variant="dark" >
                 <Carousel.Item interval={5000}>
                     <img
@@ -35,6 +36,7 @@ const Carrusel = () => {
                     />
                 </Carousel.Item>
             </Carousel>
+            </Container>
         </>
     )
 }
