@@ -50,6 +50,9 @@ const uiConfig = {
             getUser(result.user.uid, (response)=>{
                 localStorage.setItem('user', JSON.stringify(response.data));
                 localStorage.setItem('id', result.user.uid);
+                console.log();
+                console.log();
+                console.log();
             });
             
             return true;

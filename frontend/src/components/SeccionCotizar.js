@@ -1,7 +1,7 @@
 import React from 'react';
-import img1 from '../assets/img/img1.jpg';
+import img7 from '../assets/img/img7.jpg';
 import FormularioCotizar from '../components/FormularioCotizar'
-import {Container, Row, Col} from "react-bootstrap";
+import {Container, Row, Col, Figure} from "react-bootstrap";
 
 const SeccionCotizar = () => {
     return (
@@ -12,7 +12,7 @@ const SeccionCotizar = () => {
                 <Col sm={{ span: 12, offset: 0}}  lg={{ span: 6, offset: 0, order:2}} className =' align-self-center'>
                 <img
                     className="d-none d-lg-block img-fluid"
-                    src={img1}
+                    src={img7}
                     alt="First slide"
                     width = "150%"
                     style={{borderRadius: '50px 50px 50px 50px' }}

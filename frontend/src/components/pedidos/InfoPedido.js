@@ -17,12 +17,12 @@ const InfoPedido = () => {
         <>
             <Stack gap={1} >
                 <h1 style={{alignSelf: 'center'}} >DETALLES DEL PEDIDO</h1>
-                <Fila titulo={'fecha'} contenido={'Aca va la fecha a la que se solicitó el servocio'}/>
-                <Fila titulo={'Tipo servocio'} contenido={'Aca va el tipo de servocio'}/>
-                <Fila titulo={'Direccion recogida'} contenido={'contenido'}/>
-                <Fila titulo={'Direccion destino'} contenido={'lorem va el tipo de          servocio del  servocio'}/> 
+                <Fila titulo={'fecha'} contenido={'Aca va la fecha a la que se solicitó el servicio'}/>
+                <Fila titulo={'Tipo servicio'} contenido={'Aca va el tipo de servicio'}/>
+                <Fila titulo={'Dirección recogida'} contenido={'contenido'}/>
+                <Fila titulo={'Dirección destino'} contenido={'contenido'}/> 
                 <Fila titulo={'Nombre de quien recibe'} contenido={'contenido'}/>
-                <Fila titulo={'telefono de quien recibe'} contenido={'contenido'}/>
+                <Fila titulo={'teléfono de quien recibe'} contenido={'contenido'}/>
             </Stack>
         </>
     )

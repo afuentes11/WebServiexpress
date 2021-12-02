@@ -14,6 +14,7 @@ const Home = () => {
     return (
         <>  
             <BarraNavegacion login={log}/>
+            <Carrusel/>
             <SeccionCotizar/>
             <SeccionServicio />
             <InfoEmpresa/>

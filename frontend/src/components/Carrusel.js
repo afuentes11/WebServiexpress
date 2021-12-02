@@ -1,43 +1,51 @@
-import React from 'react';
-import {Carousel, Container} from 'react-bootstrap';
-import img1 from '../assets/img/img1.jpg';
-import img2 from '../assets/img/img2.jpg';
-import img3 from '../assets/img/img3.jpg';
+import React from "react";
+import { Carousel } from "react-bootstrap";
+import img4 from '../assets/img/img4.jpg';
+import img5 from '../assets/img/img5.jpg';
+import img6 from '../assets/img/img6.jpg';
 
 const Carrusel = () => {
-    return (
-        <>
-        <Container fluid={true} className=" mt-3 p-0">
-            <Carousel variant="dark" >
-                <Carousel.Item interval={5000}>
-                    <img
-                    className="img-fluid"
-                    src={img1}
-                    alt="First slide"
-                    width = "150%"
-                    />
-                </Carousel.Item>
-                <Carousel.Item interval={5000}>
-                    <img
-                    className="img-fluid"
-                    src={img2}
-                    alt="Second slide"
-                    width = "150%"
-                    
-                    />
-                </Carousel.Item>
-                <Carousel.Item interval={5000}>
-                    <img
-                    className="img-fluid"
-                    src={img3}
-                    alt="Third slide"
-                    width = "150%"
-                    
-                    />
-                </Carousel.Item>
-            </Carousel>
-            </Container>
-        </>
-    )
-}
-export default Carrusel
+  return (
+    <>
+      <Carousel variant="dark" fade>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img4}
+            alt="First slide"
+          />
+          <Carousel.Caption>
+            <h3>Serviexpress</h3>
+            <p>Servicio de mensajería al instante.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img5}
+            alt="Second slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Serviexpress</h3>
+            <p>Servicio de mensajería al instante.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+        <Carousel.Item>
+          <img
+            className="d-block w-100"
+            src={img6}
+            alt="Third slide"
+          />
+
+          <Carousel.Caption>
+            <h3>Serviexpress</h3>
+            <p>Servicio de mensajería al instante.</p>
+          </Carousel.Caption>
+        </Carousel.Item>
+      </Carousel>
+    </>
+  );
+};
+
+export default Carrusel;
