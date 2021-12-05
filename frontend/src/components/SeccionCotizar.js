@@ -1,7 +1,7 @@
 import React from 'react';
 import img7 from '../assets/img/img7.jpg';
 import FormularioCotizar from '../components/FormularioCotizar'
-import {Container, Row, Col, Figure} from "react-bootstrap";
+import {Container, Row, Col} from "react-bootstrap";
 
 const SeccionCotizar = () => {
     return (
