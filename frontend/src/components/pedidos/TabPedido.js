@@ -2,17 +2,17 @@ import React from 'react';
 import {Stack} from 'react-bootstrap';
 import {CalendarCheck, BoxSeam} from 'react-bootstrap-icons'
 
-const TabPedido = () => {
+const TabPedido = (props) => {
     return (
         <>
             <Stack >
                 <Stack direction="horizontal" gap = {2}>
                     <BoxSeam/>
-                    <div>Tipo de servicio</div>
+                    <div>{props.tipo}</div>
                 </Stack>
                 <Stack direction="horizontal" gap = {2}>
                     <CalendarCheck/>
-                    <div>Fecha</div>
+                    <div>{props.fecha}</div>
                 </Stack>
                 
             </Stack>

@@ -11,12 +11,10 @@ const Pedidos = () => {
     }
     return (
         <>  
-            <BarraNavegacion login={true} noHome={true}/>
-            <Container className='d-block m-3'>
+            <BarraNavegacion login={true} noHome={true} />
+            <Container fluid className = 'my-2'>
                 <ListaPedidos/>
             </Container>
-            
-            
             
         </>
     )
