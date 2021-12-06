@@ -1,6 +1,6 @@
 import React, {useState} from 'react'
 import {Form, Row, Col, Button, Container, Modal} from 'react-bootstrap'
-import {updateUserTotally} from '../apis/UsersCRUD'
+import {updateUserTotally, getUser} from '../apis/UsersCRUD'
 
 const FormularioServicio = () => {
 
@@ -49,7 +49,7 @@ const FormularioServicio = () => {
         },
     }
     const onClick = (e) => {
-        if(tipoServicio=='0' || direccionOrigen=='' || direccionDestino=='' || nombreReceptor=='' || celularReceptor=='') {
+        if(tipoServicio==='0' || direccionOrigen==='' || direccionDestino==='' || nombreReceptor==='' || celularReceptor==='') {
             setMensaje('Verifique que todos los campos estan llenos');
             handleShow();
         }else if(localStorage.getItem('id') === null){
@@ -61,18 +61,19 @@ const FormularioServicio = () => {
             
             const servicio = {
                 'fecha': `${fecha.toLocaleDateString()}-${fecha.toLocaleTimeString()}`,
-                'tipoServicio' : servicios[tipoServicio],
+                'tipoServicio' : servicios.tipoServicios[tipoServicio],
                 'direccionOrigen' : direccionOrigen,
                 'direccionDestino' : direccionDestino,
                 'nombreReceptor' : nombreReceptor,
                 'celularReceptor' : celularReceptor,
             }
-            const data =JSON.parse(localStorage.getItem('user'));
-            data.servicios.push(servicio);
-            localStorage.setItem('user', JSON.stringify(data));
-            updateUserTotally(data.id, data, (response) => {
-                console.log(response);
-            });
+            getUser(localStorage.getItem('id'), (response)=>{
+                const data = response.data
+                data.servicios.push(servicio);
+                updateUserTotally(data.id, data, (response) => {
+                    console.log(response);
+                });
+            })
             setMensaje('Su solicitud fue exitosa, pronto recibirá una llamada');
             setTipoServicio('0');
             setDireccionOrigen('');
