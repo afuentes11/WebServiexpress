@@ -1,5 +1,5 @@
 import axios from 'axios';
-const URL= 'http://localhost:5000/users'; 
+const URL= 'https://serviexpress-backend-prueba.herokuapp.com/users'; 
 
 export function addUser(user,callback){
     axios.post(URL,user)
