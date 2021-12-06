@@ -3,7 +3,7 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import {addUser, getUser} from '../../apis/UsersCRUD';
+import {addUser} from '../../apis/UsersCRUD';
 
 // Configure Firebase.
 const config = {
@@ -47,13 +47,7 @@ const uiConfig = {
                     console.log(response);
                 });
             }
-            getUser(result.user.uid, (response)=>{
-                localStorage.setItem('user', JSON.stringify(response.data));
-                localStorage.setItem('id', result.user.uid);
-                console.log();
-                console.log();
-                console.log();
-            });
+            localStorage.setItem('id', result.user.uid);
             
             return true;
             
