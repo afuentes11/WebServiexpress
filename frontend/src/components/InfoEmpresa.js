@@ -4,7 +4,7 @@ import {Container, Row, Col, Image} from 'react-bootstrap'
 import okey from '../assets/img/Okey.jpg'
 import gino from '../assets/img/GinoPassscalli.jpg'
 import sings from '../assets/img/Sings.jpg'
-import totto from '../assets/img/Totto.jpg'
+
 
 const InfoEmpresa = () => {
     return (
