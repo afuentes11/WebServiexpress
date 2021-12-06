@@ -3,7 +3,8 @@ import React from 'react';
 import StyledFirebaseAuth from 'react-firebaseui/StyledFirebaseAuth';
 import firebase from 'firebase/compat/app';
 import 'firebase/compat/auth';
-import {addUser} from '../../apis/UsersCRUD';
+
+
 
 // Configure Firebase.
 const config = {
@@ -42,12 +43,9 @@ const uiConfig = {
                 "servicios":[]
             };
             //verificamos si es un usuario nuevo
-            if(result.additionalUserInfo.isNewUser){
-                addUser(obj, (response)=>{
-                    console.log(response);
-                });
-            }
             localStorage.setItem('id', result.user.uid);
+            localStorage.setItem('data', JSON.stringify(obj));
+            localStorage.setItem('isNew', result.additionalUserInfo.isNewUser);
             
             return true;
             

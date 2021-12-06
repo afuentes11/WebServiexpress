@@ -15,7 +15,7 @@ const Fila = (props) => {
 const InfoPedido = (props) => {
     return (
         <>
-        <Card border="primary" style={{ minWidth:'530px' ,width: '50vw', background: '#0a6ddb', color: 'white' }}>
+        <Card border="primary" style={{maxWidth:'650' ,minWidth:'380px',width: '60vw', background: '#0a6ddb', color: 'white' }}>
             <Stack gap={3} >
                 <Card.Header>
                     <h1 style={{ textAlign: 'center'}}> DETALLES DEL PEDIDO </h1>
