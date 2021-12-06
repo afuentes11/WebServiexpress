@@ -19,7 +19,7 @@ const NavBarSm = (props) => {
     }
     return (
         <>
-            <Navbar fixed="top" expand={false} bg="ligth" variant="dark" style={{backgroundColor: '#EA0000'}} className='d-block d-lg-none'>
+            <Navbar expand={false} bg="ligth" variant="dark" style={{backgroundColor: '#EA0000'}} className='d-block d-lg-none'>
             <Container fluid>
                 <Navbar.Brand href="/">Serviexpress</Navbar.Brand>
                 <Navbar.Toggle aria-controls="offcanvasNavbar" onClick={handleShow}/>

@@ -21,7 +21,7 @@ const NavBarLg = (props) => {
 
 return (
     <>
-        <Navbar sticky="top" expand="lg" bg="ligth" variant="dark" style={{backgroundColor: '#EA0000'}} className='d-none d-lg-block'>
+        <Navbar bg="ligth" variant="dark" style={{backgroundColor: '#EA0000'}} className='d-none d-lg-block '>
         <Container>
             <Navbar.Brand href="/">Serviexpress</Navbar.Brand>
             <Nav className = {noHome}> 
