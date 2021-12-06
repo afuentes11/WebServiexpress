@@ -1,0 +1,28 @@
+{
+  "files": {
+    "main.js": "/static/js/main.c56923ee.chunk.js",
+    "main.js.map": "/static/js/main.c56923ee.chunk.js.map",
+    "runtime-main.js": "/static/js/runtime-main.ff5b8ea4.js",
+    "runtime-main.js.map": "/static/js/runtime-main.ff5b8ea4.js.map",
+    "static/css/2.383c0125.chunk.css": "/static/css/2.383c0125.chunk.css",
+    "static/js/2.0f32fc41.chunk.js": "/static/js/2.0f32fc41.chunk.js",
+    "static/js/2.0f32fc41.chunk.js.map": "/static/js/2.0f32fc41.chunk.js.map",
+    "index.html": "/index.html",
+    "static/css/2.383c0125.chunk.css.map": "/static/css/2.383c0125.chunk.css.map",
+    "static/js/2.0f32fc41.chunk.js.LICENSE.txt": "/static/js/2.0f32fc41.chunk.js.LICENSE.txt",
+    "static/media/GinoPassscalli.302ac2e6.jpg": "/static/media/GinoPassscalli.302ac2e6.jpg",
+    "static/media/Okey.c2711e97.jpg": "/static/media/Okey.c2711e97.jpg",
+    "static/media/Sings.b635c57b.jpg": "/static/media/Sings.b635c57b.jpg",
+    "static/media/img1.4f9f8903.jpg": "/static/media/img1.4f9f8903.jpg",
+    "static/media/img4.8d22f954.jpg": "/static/media/img4.8d22f954.jpg",
+    "static/media/img5.dbab1dfd.jpg": "/static/media/img5.dbab1dfd.jpg",
+    "static/media/img6.de105997.jpg": "/static/media/img6.de105997.jpg",
+    "static/media/img7.adadf323.jpg": "/static/media/img7.adadf323.jpg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.ff5b8ea4.js",
+    "static/css/2.383c0125.chunk.css",
+    "static/js/2.0f32fc41.chunk.js",
+    "static/js/main.c56923ee.chunk.js"
+  ]
+}
