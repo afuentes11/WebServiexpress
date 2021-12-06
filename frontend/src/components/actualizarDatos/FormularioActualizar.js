@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { Container, Row, Col, Stack, Button, Form, Modal } from "react-bootstrap";
 
-import {updateUserTotally} from '../../apis/UsersCRUD'
+import {updateUserTotally, getUser} from '../../apis/UsersCRUD'
 
 const FormularioActualizar = () => {
 
@@ -14,12 +14,14 @@ const FormularioActualizar = () => {
     const handleClose = () => setShow(false);
     const handleShow = () => setShow(true);
 
-    useEffect(()=>{
-        const data =JSON.parse(localStorage.getItem('user'));
-        setNombre(data.nombre);
-        setCedula(data.cedula);
-        setCelular(data.celular);
-        setDireccion(data.direccion);
+    useEffect( ()=>{
+        getUser(localStorage.getItem('id'), (response)=>{
+            setNombre(response.data.nombre);
+            setCedula(response.data.cedula);
+            setCelular(response.data.celular);
+            setDireccion(response.data.direccion);
+            localStorage.setItem('user', JSON.stringify(response.data));
+        })
     },[])
 
     const onChange = {
@@ -60,7 +62,7 @@ const FormularioActualizar = () => {
             Los datos se actualizaron correctamente
         </Modal.Body>
         </Modal>
-        <Container style={{height: '100%'}} className="col-md-6 mx-auto my-auto mt-lg-0 mt-5" >
+        <Container style={{height: '100%'}} className="col-md-6 mx-auto my-auto mt-lg-0 mt-3" >
             <Row>
             <Col>
                 
